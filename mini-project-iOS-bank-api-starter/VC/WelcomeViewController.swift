@@ -103,7 +103,7 @@ class WelcomeViewController: UIViewController {
     }
 
     @objc func loginTapped(){
-        let loginVC = ViewController() /// will change it later
+        let loginVC = LoginViewController() /// will change it later
         self.navigationController?.pushViewController(loginVC, animated: true)
         
     }
