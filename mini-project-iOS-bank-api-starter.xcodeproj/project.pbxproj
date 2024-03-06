@@ -22,6 +22,7 @@
 		41F9C5292B983D290034A83A /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C5282B983D290034A83A /* Eureka */; };
 		41F9C52C2B983D3F0034A83A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C52B2B983D3F0034A83A /* SnapKit */; };
 		41F9C52E2B983D3F0034A83A /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C52D2B983D3F0034A83A /* SnapKit-Dynamic */; };
+		41F9C5302B9845930034A83A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F9C52F2B9845930034A83A /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		05CF04DA2B97A1FA00672FDF /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 		05CF04DE2B97A22A00672FDF /* AmountChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountChange.swift; sourceTree = "<group>"; };
 		05CF04E02B97A23C00672FDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		41F9C52F2B9845930034A83A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		05CF04DD2B97A21600672FDF /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				41F9C52F2B9845930034A83A /* LoginViewController.swift */,
 				05CF04C32B97A0AF00672FDF /* ViewController.swift */,
 			);
 			path = VC;
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F9C5302B9845930034A83A /* LoginViewController.swift in Sources */,
 				05CF04C42B97A0AF00672FDF /* ViewController.swift in Sources */,
 				05CF04D42B97A12600672FDF /* customView.swift in Sources */,
 				05CF04D82B97A15200672FDF /* NetworkManager.swift in Sources */,
