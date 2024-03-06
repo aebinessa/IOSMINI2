@@ -18,6 +18,11 @@
 		05CF04DB2B97A1FA00672FDF /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04DA2B97A1FA00672FDF /* TokenResponse.swift */; };
 		05CF04DF2B97A22A00672FDF /* AmountChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04DE2B97A22A00672FDF /* AmountChange.swift */; };
 		05CF04E12B97A23C00672FDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04E02B97A23C00672FDF /* User.swift */; };
+		41F9C5242B983CF80034A83A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C5232B983CF80034A83A /* Alamofire */; };
+		41F9C5262B983CF80034A83A /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C5252B983CF80034A83A /* AlamofireDynamic */; };
+		41F9C5292B983D290034A83A /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C5282B983D290034A83A /* Eureka */; };
+		41F9C52C2B983D3F0034A83A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C52B2B983D3F0034A83A /* SnapKit */; };
+		41F9C52E2B983D3F0034A83A /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C52D2B983D3F0034A83A /* SnapKit-Dynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +46,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F9C52E2B983D3F0034A83A /* SnapKit-Dynamic in Frameworks */,
+				41F9C5242B983CF80034A83A /* Alamofire in Frameworks */,
+				41F9C52C2B983D3F0034A83A /* SnapKit in Frameworks */,
+				41F9C5262B983CF80034A83A /* AlamofireDynamic in Frameworks */,
+				41F9C5292B983D290034A83A /* Eureka in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +148,13 @@
 			dependencies = (
 			);
 			name = "mini-project-iOS-bank-api-starter";
+			packageProductDependencies = (
+				41F9C5232B983CF80034A83A /* Alamofire */,
+				41F9C5252B983CF80034A83A /* AlamofireDynamic */,
+				41F9C5282B983D290034A83A /* Eureka */,
+				41F9C52B2B983D3F0034A83A /* SnapKit */,
+				41F9C52D2B983D3F0034A83A /* SnapKit-Dynamic */,
+			);
 			productName = "mini-project-iOS-bank-api-starter";
 			productReference = 05CF04BC2B97A0AF00672FDF /* mini-project-iOS-bank-api-starter.app */;
 			productType = "com.apple.product-type.application";
@@ -166,6 +183,11 @@
 				Base,
 			);
 			mainGroup = 05CF04B32B97A0AF00672FDF;
+			packageReferences = (
+				41F9C5222B983CF80034A83A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				41F9C5272B983D290034A83A /* XCRemoteSwiftPackageReference "Eureka" */,
+				41F9C52A2B983D3F0034A83A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 05CF04BD2B97A0AF00672FDF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -421,6 +443,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41F9C5222B983CF80034A83A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.0;
+			};
+		};
+		41F9C5272B983D290034A83A /* XCRemoteSwiftPackageReference "Eureka" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/xmartlabs/Eureka";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+		41F9C52A2B983D3F0034A83A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41F9C5232B983CF80034A83A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41F9C5222B983CF80034A83A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		41F9C5252B983CF80034A83A /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41F9C5222B983CF80034A83A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+		41F9C5282B983D290034A83A /* Eureka */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41F9C5272B983D290034A83A /* XCRemoteSwiftPackageReference "Eureka" */;
+			productName = Eureka;
+		};
+		41F9C52B2B983D3F0034A83A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41F9C52A2B983D3F0034A83A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		41F9C52D2B983D3F0034A83A /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41F9C52A2B983D3F0034A83A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 05CF04B42B97A0AF00672FDF /* Project object */;
 }
