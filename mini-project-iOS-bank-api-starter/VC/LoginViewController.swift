@@ -9,6 +9,7 @@ import UIKit
 import Eureka
 
 class LoginViewController: FormViewController {
+    var users: [User] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,12 +19,13 @@ class LoginViewController: FormViewController {
     
     func setupEureka(){
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(submitTapped))
+        
         
         form +++ Section("Login")
         <<< TextRow(){
             $0.title = "Username"
             $0.placeholder = "Enter username"
+            $0.tag = tag.username.rawValue
             $0.add(rule: RuleRequired())
             $0.validationOptions = .validatesOnChange
             $0.cellUpdate { cell, row in
@@ -37,6 +39,7 @@ class LoginViewController: FormViewController {
         <<< TextRow(){
             $0.title = "Password"
             $0.placeholder = "Enter  password"
+            $0.tag = tag.password.rawValue
             $0.add(rule: RuleRequired())
             $0.validationOptions = .validatesOnChange
             $0.cellUpdate { cell, row in
@@ -46,6 +49,11 @@ class LoginViewController: FormViewController {
                     
                 }
             }
+        }
+        form +++ Section("")
+        <<< ButtonRow(){
+            $0.title = "Login"
+            self.submitTapped()
         }
         
         
@@ -58,6 +66,26 @@ class LoginViewController: FormViewController {
             presentAlertWithTitle(title: "🚫", message: "no submission for username or password")
             return
         }
+        let usernameRow: TextRow? = form.rowBy(tag: tag.username.rawValue)
+        let passwordRow: TextRow? = form.rowBy(tag: tag.password.rawValue)
+        
+        let password = passwordRow?.value ?? ""
+        let username = usernameRow?.value ?? ""
+        
+        let user = User(username: username, email: nil, password: password)
+        
+        NetworkManager.shared.signin(user: user) { result in
+            switch result{
+            case .success(let TokenResponse):
+                print(TokenResponse.token)
+                print("Sign in successful")
+            case .failure(let error):
+                print("sign in failed")
+                print(error)
+            }
+        }
+
+
         
         
     }
@@ -73,5 +101,10 @@ class LoginViewController: FormViewController {
         title = "Login Page"
         appearance.configureWithDefaultBackground()
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
+    }
+    
+    enum tag: String{
+        case username
+        case password
     }
 }

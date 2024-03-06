@@ -34,15 +34,32 @@ class NetworkManager {
             }
         }
     }
+    
+    func withdrawal(token: String, amountChange: AmountChange, completion: @escaping (Result<Void, Error>) -> Void) {
+       let url = baseUrl + "withdrawal"
+       let headers: HTTPHeaders = [.authorization(bearerToken: token)]
+       AF.request(url, method: .put, parameters: amountChange, encoder: JSONParameterEncoder.default, headers: headers).response { response in
+           if let error = response.error {
+               completion(.failure(error))
+           } else {
+               completion(.success(()))
+           }
+       }
+   }
 
     
 //    //MARK: OTHER Networking Functions
    
-   func signin(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void){
-       let url = baseUrl + "sigin"
-    
-        
+    func signin(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+        let url = baseUrl + "signin"
+        AF.request(url, method: .get, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
+            switch response.result {
+            case .success(let value):
+                completion(.success(value))
+            case .failure(let afError):
+                completion(.failure(afError as Error))
+            }
+        }
     }
-    
     
 }
