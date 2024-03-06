@@ -23,6 +23,8 @@
 		41F9C52C2B983D3F0034A83A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C52B2B983D3F0034A83A /* SnapKit */; };
 		41F9C52E2B983D3F0034A83A /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C52D2B983D3F0034A83A /* SnapKit-Dynamic */; };
 		41F9C5302B9845930034A83A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F9C52F2B9845930034A83A /* LoginViewController.swift */; };
+		B1DC87EC2B985E0B00F2F502 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC87EB2B985E0B00F2F502 /* SignUpViewController.swift */; };
+		B1DC87EE2B985E8800F2F502 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC87ED2B985E8800F2F502 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		05CF04DE2B97A22A00672FDF /* AmountChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountChange.swift; sourceTree = "<group>"; };
 		05CF04E02B97A23C00672FDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		41F9C52F2B9845930034A83A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B1DC87EB2B985E0B00F2F502 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		B1DC87ED2B985E8800F2F502 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,8 @@
 			children = (
 				41F9C52F2B9845930034A83A /* LoginViewController.swift */,
 				05CF04C32B97A0AF00672FDF /* ViewController.swift */,
+				B1DC87EB2B985E0B00F2F502 /* SignUpViewController.swift */,
+				B1DC87ED2B985E8800F2F502 /* WelcomeViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -216,8 +222,10 @@
 			files = (
 				41F9C5302B9845930034A83A /* LoginViewController.swift in Sources */,
 				05CF04C42B97A0AF00672FDF /* ViewController.swift in Sources */,
+				B1DC87EE2B985E8800F2F502 /* WelcomeViewController.swift in Sources */,
 				05CF04D42B97A12600672FDF /* customView.swift in Sources */,
 				05CF04D82B97A15200672FDF /* NetworkManager.swift in Sources */,
+				B1DC87EC2B985E0B00F2F502 /* SignUpViewController.swift in Sources */,
 				05CF04C02B97A0AF00672FDF /* AppDelegate.swift in Sources */,
 				05CF04E12B97A23C00672FDF /* User.swift in Sources */,
 				05CF04DF2B97A22A00672FDF /* AmountChange.swift in Sources */,
