@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1F57B75E-814F-4C2B-A776-15757C08A111"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "00DBA498-11A1-496A-9DEC-B53F515BEA0B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "mini-project-iOS-bank-api-starter/VC/SignUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "SignUpAction()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "00DBA498-11A1-496A-9DEC-B53F515BEA0B - ab8981e810be2956"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "mini_project_iOS_bank_api_starter.SignUpViewController.SignUpAction() -&gt; ()"
+                  moduleName = "mini-project-iOS-bank-api-starter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatmabuyabes/Documents/IOSMINI_2/mini-project-iOS-bank-api-starter/VC/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "1524">
+               </Location>
+               <Location
+                  uuid = "00DBA498-11A1-496A-9DEC-B53F515BEA0B - 3be26e8fca455395"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;mini_project_iOS_bank_api_starter.TokenResponse, Swift.Error&gt;) -&gt; () in mini_project_iOS_bank_api_starter.SignUpViewController.SignUpAction() -&gt; ()"
+                  moduleName = "mini-project-iOS-bank-api-starter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fatmabuyabes/Documents/IOSMINI_2/mini-project-iOS-bank-api-starter/VC/SignUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "116"
+                  endingLineNumber = "116"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

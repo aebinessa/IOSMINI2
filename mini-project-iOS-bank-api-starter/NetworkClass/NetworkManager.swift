@@ -23,6 +23,18 @@ class NetworkManager {
             }
         }
     }
+    
+    func login(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
+       let url = baseUrl + "login"
+       AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
+           switch response.result {
+           case .success(let value):
+               completion(.success(value))
+           case .failure(let afError):
+               completion(.failure(afError as Error))
+           }
+       }
+   }
      func deposit(token: String, amountChange: AmountChange, completion: @escaping (Result<Void, Error>) -> Void) {
         let url = baseUrl + "deposit"
         let headers: HTTPHeaders = [.authorization(bearerToken: token)]
