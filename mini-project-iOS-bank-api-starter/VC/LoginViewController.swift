@@ -53,7 +53,10 @@ class LoginViewController: FormViewController {
         form +++ Section("")
         <<< ButtonRow(){
             $0.title = "Login"
-            self.submitTapped()
+            $0.onCellSelection { 
+                [weak self] (_, _) in
+                self?.submitTapped()
+            }
         }
         
         
@@ -81,7 +84,7 @@ class LoginViewController: FormViewController {
                 print("Sign in successful")
             case .failure(let error):
                 print("sign in failed")
-                print(error)
+                print(error.localizedDescription)
             }
         }
 
@@ -98,7 +101,7 @@ class LoginViewController: FormViewController {
     
     func setupNavigation(){
         let appearance = UINavigationBarAppearance()
-        title = "Login Page"
+        title = "sigin Page"
         appearance.configureWithDefaultBackground()
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }

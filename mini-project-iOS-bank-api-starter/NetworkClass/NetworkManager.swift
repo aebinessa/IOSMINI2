@@ -52,7 +52,8 @@ class NetworkManager {
    
     func signin(user: User, completion: @escaping (Result<TokenResponse, Error>) -> Void) {
         let url = baseUrl + "signin"
-        AF.request(url, method: .get, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
+        
+        AF.request(url, method: .post, parameters: user, encoder: JSONParameterEncoder.default).responseDecodable(of: TokenResponse.self) { response in
             switch response.result {
             case .success(let value):
                 completion(.success(value))
