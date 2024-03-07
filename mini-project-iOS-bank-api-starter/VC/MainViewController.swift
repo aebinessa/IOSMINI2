@@ -11,16 +11,24 @@ import SnapKit
 class MainViewController: UIViewController {
     
     var token: String?
+    var user: User?
     
     let depositButton = UIButton()
     let withdrawButton = UIButton()
     let image = UIImageView()
+    
+    let usernameLabel = UILabel()
+    let emailLabel = UILabel()
+    let balanceLabel = UILabel()
     
     
     override func viewDidLoad() {
         view.addSubview(depositButton)
         view.addSubview(withdrawButton)
         view.addSubview(image)
+        view.addSubview(emailLabel)
+        view.addSubview(usernameLabel)
+        view.addSubview(balanceLabel)
         
         view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         title = "Main "
@@ -28,6 +36,7 @@ class MainViewController: UIViewController {
         image.image = UIImage(named: "kfh1")
         
         setUpUI()
+        fetchUserDetails(token: token ?? "")
         setUpLayout()
         setUpNavigationBar()
         nav()
@@ -59,6 +68,10 @@ class MainViewController: UIViewController {
         withdrawButton.setImage(UIImage(systemName: "minus"), for: .normal)
         
         
+        
+        
+        
+        
     }
     
     func setUpLayout(){
@@ -82,6 +95,24 @@ class MainViewController: UIViewController {
             make.leading.equalTo(depositButton.snp.trailing).offset(20)
             make.width.equalTo(150)
             make.height.equalTo(50)
+        }
+        
+        emailLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(view.safeAreaLayoutGuide).offset(100) // Adjusted constraint
+        }
+        
+        usernameLabel.snp.makeConstraints { make in
+            make.top.equalTo(emailLabel.snp.bottom).offset(10) // Adjusted constraint
+            make.centerX.equalToSuperview()
+        }
+       
+        
+        balanceLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(usernameLabel.snp.top).offset(20)
+            
+            
         }
         
         
@@ -120,17 +151,36 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(withdrawVC, animated: true)
         
     }
-
+    
     @objc func depositTapped(){
         let depositVC = DepositViewController()
         depositVC.token = token
         depositVC.modalPresentationStyle = .popover
-
+        
         self.navigationController?.pushViewController(depositVC, animated: true)
         
         
     }
-
-
+    
+    func fetchUserDetails(token: String){
+        NetworkManager.shared.fetchUserDetails(token: self.token!){
+            result in
+            switch result{
+            case.success(let userDetails):
+                let user = userDetails
+                self.usernameLabel.text = "\(user.username)"
+                self.emailLabel.text = "\(user.email)"
+                self.balanceLabel.text = "\(user.balance)"
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    
+    
 }
+
+
+
 

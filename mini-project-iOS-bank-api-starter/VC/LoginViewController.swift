@@ -82,6 +82,7 @@ class LoginViewController: FormViewController {
             case .success(let tokenResponse):
                 let mainVC = MainViewController()
                 mainVC.token = tokenResponse.token
+                mainVC.user = user
                 self.navigationController?.pushViewController(mainVC, animated: true)
                 print(tokenResponse.token)
                 print("Sign in successful")

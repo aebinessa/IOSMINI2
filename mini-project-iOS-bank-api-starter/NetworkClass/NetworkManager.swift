@@ -64,18 +64,31 @@ class NetworkManager {
     }
     
     func getTransactions(token: String, completion: @escaping (Result<[Transaction], Error>) -> Void) {
-                let url = baseUrl + "transactions"
-                let headers: HTTPHeaders = [.authorization(bearerToken: token)]
-
-                AF.request(url, headers: headers).responseDecodable(of: [Transaction].self) { response in
-                    switch response.result {
-                    case .success(let transactions):
-                        completion(.success(transactions))
-                    case .failure(let error):
-                        completion(.failure(error))
-                    }
-                }
+        let url = baseUrl + "transactions"
+        let headers: HTTPHeaders = [.authorization(bearerToken: token)]
+        
+        AF.request(url, headers: headers).responseDecodable(of: [Transaction].self) { response in
+            switch response.result {
+            case .success(let transactions):
+                completion(.success(transactions))
+            case .failure(let error):
+                completion(.failure(error))
             }
-
+        }
     }
+    
+    func fetchUserDetails(token: String, completion: @escaping (Result<UserDetails, Error>) -> Void) {
+        let headers: HTTPHeaders = [.authorization(bearerToken: token)]
+        
+        AF.request(baseUrl + "account", headers: headers).responseDecodable(of: UserDetails.self) { response in
+            switch response.result {
+            case .success(let userDetails):
+                completion(.success(userDetails))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    
+}
 
