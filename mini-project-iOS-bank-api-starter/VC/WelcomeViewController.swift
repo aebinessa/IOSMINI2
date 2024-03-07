@@ -25,7 +25,7 @@ class WelcomeViewController: UIViewController {
         view.addSubview(image)
         setUpUI()
         setUpLayout()
-        setupNavigationBar()
+        //setupNavigationBar()
         loginButton.addTarget(self, action: #selector(loginTapped), for: .touchUpInside)
         signupButton.addTarget(self, action: #selector(signupTapped), for: .touchUpInside)
     
@@ -92,16 +92,7 @@ class WelcomeViewController: UIViewController {
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
-    func setupNavigationBar() {
-        navigationItem.leftBarButtonItem = UIBarButtonItem(
-            image: UIImage(systemName: "info.circle.fill"),
-            style: .plain,
-            target: self,
-            action: #selector(navIns)
-        )
-        navigationItem.leftBarButtonItem?.tintColor = UIColor.red
-        
-    }
+
 
     @objc func loginTapped(){
         let loginVC = LoginViewController() /// will change it later
@@ -116,24 +107,11 @@ class WelcomeViewController: UIViewController {
         
     }
     
-    @objc func navIns(){
-        let insVC = ViewController()
-        insVC.modalPresentationStyle = .popover
-        self.present(insVC, animated: true)
-        
-    }
+
     
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

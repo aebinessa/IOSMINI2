@@ -15,10 +15,8 @@ class SignUpViewController: FormViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             setupForm()
+            
 
-
-
-            // Do any additional setup after loading the view.
         }
 
 
@@ -57,7 +55,7 @@ class SignUpViewController: FormViewController {
 
                 }
             }
-            <<< TextRow() { row in
+            <<< PasswordRow() { row in
                 row.title = "Password"
                 row.placeholder = "Enter a password"
                 row.tag = tag.password.rawValue
@@ -85,6 +83,7 @@ class SignUpViewController: FormViewController {
                 }
             }
         }
+    
     @objc func SignUpAction(){
 
             let errors = form.validate()
@@ -93,12 +92,12 @@ class SignUpViewController: FormViewController {
                 print(errors)
                 print("SOMETHING IS MISSING 🚨")
 
-                //presentAlertWithTitle(title: "🚨", message: "fill the empty textfields ")
+                presentAlertWithTitle(title: "🚨", message: "fill the empty textfields ")
                 return
             }
 
 
-        let passwordRow: TextRow? = form.rowBy(tag: tag.password.rawValue)  //make enum for tags
+        let passwordRow: PasswordRow? = form.rowBy(tag: tag.password.rawValue)  //make enum for tags
         let emailRow: TextRow? = form.rowBy(tag: tag.email.rawValue)  //make enum for tags
         let usernameRow: TextRow? = form.rowBy(tag: tag.username.rawValue)  //make enum for tags
 
@@ -112,7 +111,6 @@ class SignUpViewController: FormViewController {
             let user = User(username: username, email: email, password: password)
 
             NetworkManager.shared.signup(user: user) { result in
-
                 switch result{
                 case .success(let TokenResponse):
                     print(TokenResponse.token)
@@ -132,6 +130,8 @@ class SignUpViewController: FormViewController {
             self.present(alert, animated: true, completion: nil)
         }
     
+        
+
     
     enum tag: String{
         case username

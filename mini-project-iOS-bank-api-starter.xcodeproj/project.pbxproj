@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		05CF04C02B97A0AF00672FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04BF2B97A0AF00672FDF /* AppDelegate.swift */; };
 		05CF04C22B97A0AF00672FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04C12B97A0AF00672FDF /* SceneDelegate.swift */; };
-		05CF04C42B97A0AF00672FDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04C32B97A0AF00672FDF /* ViewController.swift */; };
+		05CF04C42B97A0AF00672FDF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04C32B97A0AF00672FDF /* MainViewController.swift */; };
 		05CF04C92B97A0B000672FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CF04C82B97A0B000672FDF /* Assets.xcassets */; };
 		05CF04CC2B97A0B000672FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CF04CA2B97A0B000672FDF /* LaunchScreen.storyboard */; };
 		05CF04D42B97A12600672FDF /* customView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CF04D32B97A12600672FDF /* customView.swift */; };
@@ -23,6 +23,11 @@
 		41F9C52C2B983D3F0034A83A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C52B2B983D3F0034A83A /* SnapKit */; };
 		41F9C52E2B983D3F0034A83A /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 41F9C52D2B983D3F0034A83A /* SnapKit-Dynamic */; };
 		41F9C5302B9845930034A83A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41F9C52F2B9845930034A83A /* LoginViewController.swift */; };
+		B13502252B98A2ED009CD5E9 /* DepositViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13502242B98A2ED009CD5E9 /* DepositViewController.swift */; };
+		B13502272B98A484009CD5E9 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13502262B98A484009CD5E9 /* WithdrawViewController.swift */; };
+		B13502292B98B074009CD5E9 /* UserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B13502282B98B074009CD5E9 /* UserDetail.swift */; };
+		B135022B2B98B62B009CD5E9 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135022A2B98B62B009CD5E9 /* Transaction.swift */; };
+		B135022D2B98C95A009CD5E9 /* TransactionTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B135022C2B98C95A009CD5E9 /* TransactionTableTableViewController.swift */; };
 		B1DC87EC2B985E0B00F2F502 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC87EB2B985E0B00F2F502 /* SignUpViewController.swift */; };
 		B1DC87EE2B985E8800F2F502 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1DC87ED2B985E8800F2F502 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -31,7 +36,7 @@
 		05CF04BC2B97A0AF00672FDF /* mini-project-iOS-bank-api-starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mini-project-iOS-bank-api-starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CF04BF2B97A0AF00672FDF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CF04C12B97A0AF00672FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		05CF04C32B97A0AF00672FDF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		05CF04C32B97A0AF00672FDF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		05CF04C82B97A0B000672FDF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CF04CB2B97A0B000672FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CF04CD2B97A0B000672FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -41,6 +46,11 @@
 		05CF04DE2B97A22A00672FDF /* AmountChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountChange.swift; sourceTree = "<group>"; };
 		05CF04E02B97A23C00672FDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		41F9C52F2B9845930034A83A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B13502242B98A2ED009CD5E9 /* DepositViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepositViewController.swift; sourceTree = "<group>"; };
+		B13502262B98A484009CD5E9 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
+		B13502282B98B074009CD5E9 /* UserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetail.swift; sourceTree = "<group>"; };
+		B135022A2B98B62B009CD5E9 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		B135022C2B98C95A009CD5E9 /* TransactionTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableTableViewController.swift; sourceTree = "<group>"; };
 		B1DC87EB2B985E0B00F2F502 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		B1DC87ED2B985E8800F2F502 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +133,8 @@
 				05CF04DA2B97A1FA00672FDF /* TokenResponse.swift */,
 				05CF04E02B97A23C00672FDF /* User.swift */,
 				05CF04DE2B97A22A00672FDF /* AmountChange.swift */,
+				B13502282B98B074009CD5E9 /* UserDetail.swift */,
+				B135022A2B98B62B009CD5E9 /* Transaction.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -131,9 +143,12 @@
 			isa = PBXGroup;
 			children = (
 				41F9C52F2B9845930034A83A /* LoginViewController.swift */,
-				05CF04C32B97A0AF00672FDF /* ViewController.swift */,
+				05CF04C32B97A0AF00672FDF /* MainViewController.swift */,
 				B1DC87EB2B985E0B00F2F502 /* SignUpViewController.swift */,
 				B1DC87ED2B985E8800F2F502 /* WelcomeViewController.swift */,
+				B13502242B98A2ED009CD5E9 /* DepositViewController.swift */,
+				B13502262B98A484009CD5E9 /* WithdrawViewController.swift */,
+				B135022C2B98C95A009CD5E9 /* TransactionTableTableViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -221,16 +236,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				41F9C5302B9845930034A83A /* LoginViewController.swift in Sources */,
-				05CF04C42B97A0AF00672FDF /* ViewController.swift in Sources */,
+				B13502292B98B074009CD5E9 /* UserDetail.swift in Sources */,
+				B13502252B98A2ED009CD5E9 /* DepositViewController.swift in Sources */,
+				05CF04C42B97A0AF00672FDF /* MainViewController.swift in Sources */,
 				B1DC87EE2B985E8800F2F502 /* WelcomeViewController.swift in Sources */,
 				05CF04D42B97A12600672FDF /* customView.swift in Sources */,
+				B13502272B98A484009CD5E9 /* WithdrawViewController.swift in Sources */,
 				05CF04D82B97A15200672FDF /* NetworkManager.swift in Sources */,
 				B1DC87EC2B985E0B00F2F502 /* SignUpViewController.swift in Sources */,
+				B135022D2B98C95A009CD5E9 /* TransactionTableTableViewController.swift in Sources */,
 				05CF04C02B97A0AF00672FDF /* AppDelegate.swift in Sources */,
 				05CF04E12B97A23C00672FDF /* User.swift in Sources */,
 				05CF04DF2B97A22A00672FDF /* AmountChange.swift in Sources */,
 				05CF04DB2B97A1FA00672FDF /* TokenResponse.swift in Sources */,
 				05CF04C22B97A0AF00672FDF /* SceneDelegate.swift in Sources */,
+				B135022B2B98B62B009CD5E9 /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

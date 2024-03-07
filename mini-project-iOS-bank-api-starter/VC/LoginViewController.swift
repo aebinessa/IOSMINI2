@@ -36,7 +36,7 @@ class LoginViewController: FormViewController {
                 }
             }
         }
-        <<< TextRow(){
+        <<< PasswordRow(){
             $0.title = "Password"
             $0.placeholder = "Enter  password"
             $0.tag = tag.password.rawValue
@@ -70,7 +70,7 @@ class LoginViewController: FormViewController {
             return
         }
         let usernameRow: TextRow? = form.rowBy(tag: tag.username.rawValue)
-        let passwordRow: TextRow? = form.rowBy(tag: tag.password.rawValue)
+        let passwordRow: PasswordRow? = form.rowBy(tag: tag.password.rawValue)
         
         let password = passwordRow?.value ?? ""
         let username = usernameRow?.value ?? ""
@@ -79,8 +79,11 @@ class LoginViewController: FormViewController {
         
         NetworkManager.shared.signin(user: user) { result in
             switch result{
-            case .success(let TokenResponse):
-                print(TokenResponse.token)
+            case .success(let tokenResponse):
+                let mainVC = MainViewController()
+                mainVC.token = tokenResponse.token
+                self.navigationController?.pushViewController(mainVC, animated: true)
+                print(tokenResponse.token)
                 print("Sign in successful")
             case .failure(let error):
                 print("sign in failed")
@@ -101,7 +104,7 @@ class LoginViewController: FormViewController {
     
     func setupNavigation(){
         let appearance = UINavigationBarAppearance()
-        title = "sigin Page"
+        title = "Sign Up Page"
         appearance.configureWithDefaultBackground()
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
