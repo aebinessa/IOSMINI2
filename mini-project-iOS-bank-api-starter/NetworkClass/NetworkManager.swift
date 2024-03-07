@@ -36,7 +36,7 @@ class NetworkManager {
     }
     
     func withdrawal(token: String, amountChange: AmountChange, completion: @escaping (Result<Void, Error>) -> Void) {
-        let url = baseUrl + "withdrawal"
+        let url = baseUrl + "withdraw"
         let headers: HTTPHeaders = [.authorization(bearerToken: token)]
         AF.request(url, method: .put, parameters: amountChange, encoder: JSONParameterEncoder.default, headers: headers).response { response in
             if let error = response.error {

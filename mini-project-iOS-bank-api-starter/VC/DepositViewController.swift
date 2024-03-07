@@ -70,7 +70,7 @@ class DepositViewController: FormViewController {
             let amountChange = AmountChange(amount: amount) // Create an AmountChange object
 //                print("Token: \(token)")
 //                print("AmountChange: \(amountChange)")
-            NetworkManager.shared.deposit(token: token ?? "", amountChange: amountChange) { result in
+            NetworkManager.shared.deposit(token: token!, amountChange: amountChange) { result in
                 print(self.token)
                 print(amountChange)
                 

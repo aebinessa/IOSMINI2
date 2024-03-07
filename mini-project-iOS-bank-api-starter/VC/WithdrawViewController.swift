@@ -64,26 +64,31 @@ class WithdrawViewController: FormViewController {
             return
         }
         
-        let amountChange = AmountChange(amount: amount) // Create an AmountChange object
-        //                print("Token: \(token)")
-        //                print("AmountChange: \(amountChange)")
-        NetworkManager.shared.deposit(token: token ?? "", amountChange: amountChange) { result in
+        let amountChange = AmountChange(amount: amount) 
+        // Create an AmountChange object
+        // print("Token: \(token)")
+        // print("AmountChange: \(amountChange)")
+        
+        NetworkManager.shared.withdrawal(token: token!, amountChange: amountChange) { result in
             print(self.token)
             print(amountChange)
             
-            if self.token == nil{
-                print("token not found ")
-            } else{
-                switch result {
-                case .success:
-                    // Handle success, maybe update UI or show a success message
-                    print("Withdraw successful")
-                case .failure(let error):
-                    // Handle failure, maybe show an error message
-                    print("Withdraw failed with error: \(error)")
+            DispatchQueue.main.async {
+                if self.token == nil{
+                    print("token not found ")
+                } else{
+                    switch result {
+                    case .success():
+                        // Handle success, maybe update UI or show a success message
+                        print("Withdraw successful")
+                    case .failure(let error):
+                        // Handle failure, maybe show an error message
+                        print("Withdraw failed with error: \(error)")
+                    }
+                    
                 }
-                
             }
+          
             
         }
         

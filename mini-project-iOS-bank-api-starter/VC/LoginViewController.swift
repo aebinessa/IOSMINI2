@@ -105,7 +105,6 @@ class LoginViewController: FormViewController {
     
     func setupNavigation(){
         let appearance = UINavigationBarAppearance()
-        title = "Sign Up Page"
         appearance.configureWithDefaultBackground()
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }

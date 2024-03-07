@@ -34,11 +34,26 @@ class TransactionsTableViewController: UITableViewController {
         let cell = UITableViewCell(style: UITableViewCell.CellStyle.value1, reuseIdentifier: "cell")
         
         let transaction = transactions[indexPath.row]
+        print(transaction)
+        cell.textLabel?.text = "\(transaction.type)"
+        cell.detailTextLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        cell.textLabel?.numberOfLines = 6
+        cell.detailTextLabel?.text = "\(transaction.amount)"
         
-        cell.textLabel?.text = "Transaction: \(transaction.type)"
-        cell.textLabel?.numberOfLines = 2
-        cell.detailTextLabel?.text = "Amount: \(transaction.amount)"
-        cell.detailTextLabel?.textColor = transaction.type == "deposit" ? #colorLiteral(red: 0.01246238127, green: 0.5615252256, blue: 0.3185392618, alpha: 1) : #colorLiteral(red: 0.5807225108, green: 0.066734083, blue: 0, alpha: 1)
+        if transaction.type == "deposit" {
+                cell.detailTextLabel?.text = "+ \(transaction.amount)"
+        } else {
+                cell.detailTextLabel?.text = "- \(transaction.amount)"
+        }
+        
+        // for the name
+        if transaction.type == "deposit" {
+            cell.textLabel?.textColor = #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1)
+        } else {
+            cell.textLabel?.textColor = #colorLiteral(red: 1, green: 0, blue: 0.03613648936, alpha: 1)
+        }
+        
+
         return cell
     }
     
